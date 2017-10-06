@@ -32,6 +32,10 @@ public class VirtualPet {
 	public void tick(int time) {
 		hunger += time;
 		tiredness += time;
-		anger += time;
+		anger += time + 5;
+	}
+	
+	public void watchNews(int foxChannel) {
+		anger += foxChannel;
 	}
 }
