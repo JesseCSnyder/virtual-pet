@@ -30,7 +30,7 @@ public class VirtualPetApp {
 				break;
 			}
 			System.out.println("Trumpy's current state:");
-			System.out.println("Anger level = " + trumpy.anger + "\n" + "Hunger level = " + trumpy.hunger+"\n"
+			System.out.println("Anger level = " + trumpy.anger + "\n" + "Hunger level = " + trumpy.hunger + "\n"
 					+ "Tiredness level = " + trumpy.tiredness);
 			System.out.println("Choose an option:");
 			System.out.println("Press 1 to feed trumpy.");
@@ -50,6 +50,7 @@ public class VirtualPetApp {
 				System.out.println("Uh oh, trumpy is tweeting!");
 				trumpy.tweet(somethingOffensive);
 			} else if (choice.equals("4")) {
+				System.out.println("Look out! Trumpy is watching the news!");
 				trumpy.watchNews(foxChannel);
 			} else if (choice.equals("5")) {
 				System.out.println("Goodbye and covfefe!");
