@@ -34,7 +34,7 @@ public class VirtualPet {
 		tiredness += time;
 		anger += time + 5;
 	}
-	
+
 	public void watchNews(int foxChannel) {
 		anger += foxChannel;
 	}
