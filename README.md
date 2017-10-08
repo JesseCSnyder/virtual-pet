@@ -1,0 +1,1 @@
+If any of Widgy's attributes (hunger, thirst, tiredness) reach 200 the game will end with a message.

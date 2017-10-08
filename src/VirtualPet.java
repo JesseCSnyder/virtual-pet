@@ -2,40 +2,37 @@
 public class VirtualPet {
 
 	public int hunger;
-	public int anger;
+	public int thirst;
 	public int tiredness;
 
-	public VirtualPet(int hunger, int anger, int tiredness) {
+	public VirtualPet(int hunger, int thirst, int tiredness) {
 		this.hunger = hunger;
-		this.anger = anger;
+		this.thirst = thirst;
 		this.tiredness = tiredness;
 	}
 
-	public void feed(int tacoBowl) {
-		hunger -= tacoBowl;
-		tiredness += tacoBowl;
-		anger -= tacoBowl;
+	public void feed(int food) {
+		hunger -= food;
+		tiredness += food;
+		thirst += food;
 	}
 
-	public void sleep(int couch) {
-		tiredness -= couch;
-		hunger += couch;
-		anger -= couch;
+	public void sleep(int bed) {
+		tiredness -= bed;
+		hunger += bed;
+		thirst += bed;
 	}
 
-	public void tweet(int somethingOffensive) {
-		hunger += somethingOffensive;
-		tiredness += somethingOffensive;
-		anger -= somethingOffensive;
+	public void drink(int water) {
+		hunger += water;
+		tiredness += water;
+		thirst -= water;
 	}
 
 	public void tick(int time) {
 		hunger += time;
 		tiredness += time;
-		anger += time + 5;
+		thirst += time;
 	}
 
-	public void watchNews(int foxChannel) {
-		anger += foxChannel;
-	}
 }

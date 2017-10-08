@@ -4,59 +4,55 @@ public class VirtualPetApp {
 
 	public static void main(String[] args) {
 
-		VirtualPet trumpy;
-		trumpy = new VirtualPet(0, 0, 0);
+		VirtualPet widgy = new VirtualPet(-7, -7, -7);
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Welcome to trumpy's world!");
+		System.out.println("Welcome to Widgy's World!\n");
 		String choice;
-		int tacoBowl = 10;
-		int couch = 10;
-		int somethingOffensive = 10;
-		int time = 5;
-		int foxChannel = 20;
+		int food = 10;
+		int bed = 10;
+		int water = 10;
+		int time = 7;
+
 		do {
-			trumpy.tick(time);
-			if (trumpy.anger >= 200) {
-				System.out.println("Trumpy has had an aneurysm and died!");
+			widgy.tick(time);
+			if (widgy.thirst >= 200) {
+				System.out.println("Widgy is too thirsty to play!");
 				break;
 			}
-			if (trumpy.hunger >= 200) {
-				System.out.println("Trumpy has starved to death!");
+			if (widgy.hunger >= 200) {
+				System.out.println("Widgy is too hungry to play!");
 				break;
 			}
-			if (trumpy.tiredness >= 200) {
-				System.out.println("Trumpy has fallen into a deep slumber from which he will not awaken...ever!");
+			if (widgy.tiredness >= 200) {
+				System.out.println("Widgy is taking the day off to rest!");
 				break;
 			}
-			System.out.println("Trumpy's current state:");
-			System.out.println("Anger level = " + trumpy.anger + "\n" + "Hunger level = " + trumpy.hunger + "\n"
-					+ "Tiredness level = " + trumpy.tiredness);
+			System.out.println("Widgy's current state:");
+			System.out.println("Thirst level = " + widgy.thirst + "\n" + "Hunger level = " + widgy.hunger + "\n"
+					+ "Tiredness level = " + widgy.tiredness + "\n");
 			System.out.println("Choose an option:");
-			System.out.println("Press 1 to feed trumpy.");
-			System.out.println("Press 2 to put trumpy to bed.");
-			System.out.println("Press 3 to let trumpy Tweet.");
-			System.out.println("Press 4 to let trumpy watch the news.");
-			System.out.println("Press 5 to quit.");
+			System.out.println("Press 1 to feed Widgy.");
+			System.out.println("Press 2 to put Widgy to bed.");
+			System.out.println("Press 3 to water Widgy.");
+			System.out.println("Press 4 to quit.");
 			choice = input.nextLine();
 
 			if (choice.equals("1")) {
-				System.out.println("You have fed trumpy!");
-				trumpy.feed(tacoBowl);
+				System.out.println("You have fed Widgy!");
+				widgy.feed(food);
 			} else if (choice.equals("2")) {
-				System.out.println("Shhh...trumpy is sleeping.");
-				trumpy.sleep(couch);
+				System.out.println("Shhh...Widgy is sleeping.");
+				widgy.sleep(bed);
 			} else if (choice.equals("3")) {
-				System.out.println("Uh oh, trumpy is tweeting!");
-				trumpy.tweet(somethingOffensive);
+				System.out.println("You have watered Widgy!");
+				widgy.drink(water);
 			} else if (choice.equals("4")) {
-				System.out.println("Look out! Trumpy is watching the news!");
-				trumpy.watchNews(foxChannel);
-			} else if (choice.equals("5")) {
-				System.out.println("Goodbye and covfefe!");
+				System.out.println("Goodbye!");
 				break;
 			}
-		} while (!choice.equals("5"));
+
+		} while (!choice.equals("4"));
 
 		input.close();
 
