@@ -4,15 +4,15 @@ public class VirtualPetApp {
 
 	public static void main(String[] args) {
 
-		VirtualPet widgy = new VirtualPet(-7, -7, -7);
+		VirtualPet widgy = new VirtualPet(-3, -3, -3);
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Welcome to Widgy's World!\n");
 		String choice;
-		int food = 10;
-		int bed = 10;
-		int water = 10;
-		int time = 7;
+		int food = 5;
+		int bed = 5;
+		int water = 5;
+		int time = 3;
 
 		do {
 			widgy.tick(time);
